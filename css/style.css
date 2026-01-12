@@ -1,6 +1,39 @@
-.hero{
+.hero {
     padding: 25px;
     margin: 15px;
     background-color: aquamarine;
     border: 1px solid #008b8b;
+    color: #004d4d;
+}
+
+.about {
+    padding: 25px;
+    margin: 15px;
+    background-color: #b2f0e6;
+    border: 1px solid #007a7a;
+    color: #004d4d;
+}
+
+.services {
+    padding: 25px;
+    margin: 15px;
+    background-color: #c8f7ef;
+    border: 1px solid #006666;
+    color: #003333;
+}
+.contact {
+    padding: 25px;
+    margin: 15px;
+    background-color: #d9f9f5;
+    border: 1px solid #005555;
+    color: #002626;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004d4d;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
