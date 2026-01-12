@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+
+<p id="demo">Week 2 Day 1</p>
+
+<button id="btn">Show / Hide</button>
+
+<script>
+    var text = document.getElementById("demo");
+    var button = document.getElementById("btn");
+
+    button.onclick = function () {
+        if (text.innerText === "") {
+            text.innerText = "Week 2 Day 1";
+        } else {
+            text.innerText = "";
+        }
+    };
+</script>
+
+</body>
+</html>
