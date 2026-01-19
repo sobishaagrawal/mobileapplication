@@ -1,0 +1,26 @@
+body {
+    font-family: Arial;
+    background-color: #f0f0f0;
+}
+
+.result-calculator {
+    width: 300px;
+    background-color: white;
+    padding: 15px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+}
