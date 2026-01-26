@@ -1,26 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <meta charset="UTF-8">
-<title>Shuffle</title>
-<link rel="stylesheet" href="animate.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="animate.js"></script>
+<head>
+    <title>Swap Position (Color Changed)</title>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <style>
+        .container {
+            position: relative;
+            width: 120px;
+            height: 520px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border: 2px solid #333;
+            color: white;
+        }
+
+        #b1 {
+            top: 0px;
+            background: #9588e8;
+        }
+
+        #b2 {
+            top: 120px;
+            background: #6deae4;
+        }
+
+        #b3 {
+            top: 240px;
+            background: #f7a3f4;
+        }
+
+        #b4 {
+            top: 360px;
+            background: #e4a18e;
+        }
+
+        h1 {
+            margin: 0;
+            line-height: 100px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
-    <div class="box" id="div1"><h1>1</h1></div>
-    <div class="box" id="div2"><h1>2</h1></div>
-    <div class="box" id="div3"><h1>3</h1></div>
-    <div class="box" id="div4"><h1>4</h1></div>
-</div>
+    <div class="container">
+        <div class="box" id="b1">
+            <h1>Box 1</h1>
+        </div>
+        <div class="box" id="b2">
+            <h1>Box 2</h1>
+        </div>
+        <div class="box" id="b3">
+            <h1>Box 3</h1>
+        </div>
+        <div class="box" id="b4">
+            <h1>Box 4</h1>
+        </div>
+    </div>
 
-<br>
-<button id="startBtn">Start Animation</button>
+    <br>
+    <button id="startBtn">Swap Positions</button>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#startBtn").click(function () {
+
+                var p1 = $("#b1").position().top;
+                var p2 = $("#b2").position().top;
+                var p3 = $("#b3").position().top;
+                var p4 = $("#b4").position().top;
+
+                $("#b1").animate({ top: p2 }, 700);
+                $("#b2").animate({ top: p3 }, 700);
+                $("#b3").animate({ top: p4 }, 700);
+                $("#b4").animate({ top: p1 }, 700);
+
+            });
+
+        });
+    </script>
 
 </body>
+
 </html>
